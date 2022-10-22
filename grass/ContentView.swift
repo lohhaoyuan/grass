@@ -13,7 +13,7 @@ struct ContentView: View {
             let col1 = UIColor(red: 0, green: 73, blue: 57, alpha: 1)
 
             Text("Grass !")
-                .foregroundColor(col1)
+                .foregroundColor(.green)
                 .font(.largeTitle)
             
         }
