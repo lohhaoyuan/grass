@@ -1,2 +1,4 @@
-# grass
-a houseplant app for the passionate people with bad memory
+# Grass
+A houseplant app for the passionate plant people with bad memory.
+
+Grass helps you keep track of your plants and their status.
