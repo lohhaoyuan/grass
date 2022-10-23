@@ -10,8 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            let col1 = UIColor(red: 0, green: 73, blue: 57, alpha: 1)
-
+ 
             Text("Grass !")
                 .foregroundColor(.green)
                 .font(.largeTitle)
