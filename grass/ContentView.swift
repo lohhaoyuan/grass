@@ -10,11 +10,14 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
- 
-            Text("Grass !")
+
+            
+            Text("Grass")
                 .foregroundColor(.green)
                 .font(.largeTitle)
-            
+            Text("Personalise Your Growing Experience")
+                .font(.body)
+                .foregroundColor(.green)
         }
         .padding()
     }
