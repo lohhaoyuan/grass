@@ -13,11 +13,16 @@ struct ContentView: View {
 
             
             Text("Grass")
-                .foregroundColor(.green)
-                .font(.largeTitle)
+                .foregroundColor(Color(red: 0.0, green: 0.27843137, blue: 0.22745098, opacity: 100.0))
+                .font(.monospaced(.largeTitle)())
+                .multilineTextAlignment(.leading)
             Text("Personalise Your Growing Experience")
                 .font(.body)
-                .foregroundColor(.green)
+                .multilineTextAlignment(.leading)
+                .foregroundColor(Color(red: 0.0, green: 0.27843137, blue: 0.22745098, opacity: 100.0))
+                .lineLimit(nil)
+
+
         }
         .padding()
     }
