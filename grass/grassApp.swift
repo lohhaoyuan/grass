@@ -8,6 +8,7 @@
 import SwiftUI
 
 @main
+
 struct grassApp: App {
     var body: some Scene {
         WindowGroup {
