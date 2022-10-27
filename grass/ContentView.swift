@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack{
-            HStack{
+            HStack(){
                 Text("Grass")
                     .foregroundColor(Color(red: 0.0, green: 0.27843137, blue: 0.22745098, opacity: 100.0))
                     .font(.monospaced(.largeTitle)())
@@ -26,6 +26,16 @@ struct ContentView: View {
    
                 
             }
+            .padding(70.0)
+            Button("Get Started.") {
+                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+            }
+            .padding(.vertical, 20)
+            .padding(.horizontal, 87.75)
+            .foregroundColor(.white)
+            .background(Color(red: -0.123, green: 0.285, blue: 0.225))
+            .cornerRadius(22.0)
+
         }
     }
     
