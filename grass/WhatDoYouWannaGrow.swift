@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WhatDoYouWannaGrow: View {
     var body: some View {
-
+        Text("What do you want to grow?")
     }
 }
 
