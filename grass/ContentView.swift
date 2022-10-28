@@ -28,8 +28,9 @@ struct ContentView: View {
             }
             .padding(70.0)
             Button("Get Started.") {
-                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+
             }
+            .navigationTitle("The Entrace Screen")
             .padding(.vertical, 20)
             .padding(.horizontal, 87.75)
             .foregroundColor(.white)
