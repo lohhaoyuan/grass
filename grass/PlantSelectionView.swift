@@ -13,7 +13,7 @@ struct PlantSelectionView: View {
             .font(.largeTitle)
             .fontWeight(.semibold)
             .multilineTextAlignment(.leading)
-
+        
         Button("My plant is not here") {
             // plant selection thingy
         }
@@ -22,7 +22,9 @@ struct PlantSelectionView: View {
         .padding(.horizontal, 87.75)
         .foregroundColor(.white)
         .background(Color(red: -0.123, green: 0.285, blue: 0.225))
-        .cornerRadius(22.0)    }
+        .cornerRadius(22.0)
+        
+    }
 }
 
 struct PlantSelectionView_Previews: PreviewProvider {
