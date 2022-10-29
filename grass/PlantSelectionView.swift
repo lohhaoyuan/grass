@@ -37,7 +37,7 @@ struct PlantSelectionView: View {
                 .cornerRadius(22.0)
 
                 
-                NavigationLink(destination: PlantSelectionView()) {
+                NavigationLink(destination: AddCustomPlantView()) {
                     Text("My plant isn't here!")
                 }
                 
