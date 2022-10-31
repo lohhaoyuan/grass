@@ -15,7 +15,7 @@ struct AddCustomPlantView: View {
                     .font(.largeTitle)
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.leading)
-
+                
                 
                 TextField("Plant name", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
                     .padding(.leading, 20.0)
