@@ -15,6 +15,8 @@ struct PlantSelectionView: View {
                     .font(.largeTitle)
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.leading)
+                    .foregroundColor(Color("Swamp Green"))
+                    .padding(.all, 18.0)
                 Menu {
                     Button {
                         //set some variable/initialise array
@@ -33,18 +35,19 @@ struct PlantSelectionView: View {
                 .padding(.vertical, 20)
                 .padding(.horizontal, 87.75)
                 .foregroundColor(.white)
-                .background(Color(red: -0.123, green: 0.285, blue: 0.225))
+                .background(Color("Swamp Green"))
                 .cornerRadius(22.0)
 
                 
                 NavigationLink(destination: AddCustomPlantView()) {
                     Text("My plant isn't here!")
+
                 }
                 
                 .padding(.vertical, 20)
                 .padding(.horizontal, 60.75)
                 .foregroundColor(.white)
-                .background(Color(red: -0.123, green: 0.285, blue: 0.225))
+                .background(Color("Swamp Green"))
                 .cornerRadius(22.0)
             }
         }

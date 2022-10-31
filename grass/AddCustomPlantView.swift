@@ -16,7 +16,12 @@ struct AddCustomPlantView: View {
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.leading)
 
+                
+                TextField("Plant name", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                    .padding(.leading, 20.0)
+                
             }
+            .foregroundColor(Color("Swamp Green"))
         }
         .navigationTitle("Add Custom Plant")
     }
