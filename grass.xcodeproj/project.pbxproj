@@ -13,6 +13,7 @@
 		D9216779290391A20002F405 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9216778290391A20002F405 /* ContentView.swift */; };
 		D921677B290391A40002F405 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D921677A290391A40002F405 /* Assets.xcassets */; };
 		D921677F290391A40002F405 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D921677E290391A40002F405 /* Preview Assets.xcassets */; };
+		D9C8FFBF290FDD91007E32CF /* AddCustomPlantInformationview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C8FFBE290FDD90007E32CF /* AddCustomPlantInformationview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D921677A290391A40002F405 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D921677C290391A40002F405 /* grass.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = grass.entitlements; sourceTree = "<group>"; };
 		D921677E290391A40002F405 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D9C8FFBE290FDD90007E32CF /* AddCustomPlantInformationview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomPlantInformationview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				D9216778290391A20002F405 /* ContentView.swift */,
 				C680A1CE290BFD8200366299 /* PlantSelectionView.swift */,
 				C69E05C2290CBC97008A449E /* AddCustomPlantView.swift */,
+				D9C8FFBE290FDD90007E32CF /* AddCustomPlantInformationview.swift */,
 				D921677A290391A40002F405 /* Assets.xcassets */,
 				D921677C290391A40002F405 /* grass.entitlements */,
 				D921677D290391A40002F405 /* Preview Content */,
@@ -149,6 +152,7 @@
 				C69E05C3290CBC97008A449E /* AddCustomPlantView.swift in Sources */,
 				D9216777290391A20002F405 /* grassApp.swift in Sources */,
 				C680A1CF290BFD8200366299 /* PlantSelectionView.swift in Sources */,
+				D9C8FFBF290FDD91007E32CF /* AddCustomPlantInformationview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
