@@ -11,7 +11,7 @@ struct AddCustomPlantView: View {
     var body: some View {
         NavigationView {
             VStack{
-                Text("What’s your plant name?")
+                Text("What’s your plant called?")
                     .font(.largeTitle)
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.leading)
