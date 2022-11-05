@@ -14,17 +14,21 @@ struct PlantConfirmationView: View {
             ZStack{
                 Rectangle()
                     .fill(.cyan)
-                VStack{
-                    Text(plantsel.scientificName)
-                        .italic()
-                        .foregroundColor(Color("Swamp Green"))
-                        .font(.title)
+                HStack{
+                    VStack{
+                        Spacer()
+                        Text(plantsel.scientificName)
+                            .italic()
+                            .foregroundColor(Color("Swamp Green"))
+                            .font(.title)
                         
-                    Text(plantsel.name)
-                        .bold()
-                        .foregroundColor(Color("Swamp Green"))
-                        .font(.largeTitle)
-                    
+                        Text(plantsel.name)
+                            .bold()
+                            .foregroundColor(Color("Swamp Green"))
+                            .font(.largeTitle)
+                        
+                    }
+                    Spacer()
                 }
             }
             
