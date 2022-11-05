@@ -36,6 +36,7 @@ struct PlantSelectionView: View {
                         .foregroundColor(.white)
                         .background(Color("Swamp Green"))
                         .cornerRadius(22.0)
+                        .animation(.easeIn, value: 5)
                 }
 
                 
