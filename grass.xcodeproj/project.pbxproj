@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C680A1CF290BFD8200366299 /* PlantSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C680A1CE290BFD8200366299 /* PlantSelectionView.swift */; };
 		C69E05C3290CBC97008A449E /* AddCustomPlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69E05C2290CBC97008A449E /* AddCustomPlantView.swift */; };
+		D91B865B2915FAB600631102 /* PlantClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91B865A2915FAB600631102 /* PlantClass.swift */; };
 		D9216777290391A20002F405 /* grassApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9216776290391A20002F405 /* grassApp.swift */; };
 		D9216779290391A20002F405 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9216778290391A20002F405 /* ContentView.swift */; };
 		D921677B290391A40002F405 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D921677A290391A40002F405 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		C680A1CE290BFD8200366299 /* PlantSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantSelectionView.swift; sourceTree = "<group>"; };
 		C69E05C2290CBC97008A449E /* AddCustomPlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomPlantView.swift; sourceTree = "<group>"; };
+		D91B865A2915FAB600631102 /* PlantClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantClass.swift; sourceTree = "<group>"; };
 		D9216773290391A20002F405 /* grass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9216776290391A20002F405 /* grassApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = grassApp.swift; sourceTree = "<group>"; };
 		D9216778290391A20002F405 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				C680A1CE290BFD8200366299 /* PlantSelectionView.swift */,
 				C69E05C2290CBC97008A449E /* AddCustomPlantView.swift */,
 				D9C8FFBE290FDD90007E32CF /* AddCustomPlantInformationview.swift */,
+				D91B865A2915FAB600631102 /* PlantClass.swift */,
 				D921677A290391A40002F405 /* Assets.xcassets */,
 				D921677C290391A40002F405 /* grass.entitlements */,
 				D921677D290391A40002F405 /* Preview Content */,
@@ -152,6 +155,7 @@
 				C69E05C3290CBC97008A449E /* AddCustomPlantView.swift in Sources */,
 				D9216777290391A20002F405 /* grassApp.swift in Sources */,
 				C680A1CF290BFD8200366299 /* PlantSelectionView.swift in Sources */,
+				D91B865B2915FAB600631102 /* PlantClass.swift in Sources */,
 				D9C8FFBF290FDD91007E32CF /* AddCustomPlantInformationview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
