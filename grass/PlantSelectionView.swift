@@ -36,12 +36,9 @@ struct PlantSelectionView: View {
                         .foregroundColor(.white)
                         .background(Color("Swamp Green"))
                         .cornerRadius(22.0)
-<<<<<<< HEAD
                         .animation(.easeIn, value: 5)
-=======
->>>>>>> main
                 }
-
+                
                 
                 
                 NavigationLink(destination: AddCustomPlantView()) {
@@ -53,7 +50,7 @@ struct PlantSelectionView: View {
                         .cornerRadius(22.0)
                     
                 }
-
+                
             }
         }
     }
