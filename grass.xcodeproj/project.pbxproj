@@ -15,8 +15,22 @@
 		D9216779290391A20002F405 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9216778290391A20002F405 /* ContentView.swift */; };
 		D921677B290391A40002F405 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D921677A290391A40002F405 /* Assets.xcassets */; };
 		D921677F290391A40002F405 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D921677E290391A40002F405 /* Preview Assets.xcassets */; };
+		D941687F2918A3CA00E001DD /* customPlantClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941687E2918A3CA00E001DD /* customPlantClass.swift */; };
 		D9C8FFBF290FDD91007E32CF /* AddCustomPlantInformationview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C8FFBE290FDD90007E32CF /* AddCustomPlantInformationview.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D94168932918D3F000E001DD /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C680A1CE290BFD8200366299 /* PlantSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantSelectionView.swift; sourceTree = "<group>"; };
@@ -29,6 +43,7 @@
 		D921677A290391A40002F405 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D921677C290391A40002F405 /* grass.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = grass.entitlements; sourceTree = "<group>"; };
 		D921677E290391A40002F405 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D941687E2918A3CA00E001DD /* customPlantClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customPlantClass.swift; sourceTree = "<group>"; };
 		D9C8FFBE290FDD90007E32CF /* AddCustomPlantInformationview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomPlantInformationview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +83,7 @@
 				C69E05C2290CBC97008A449E /* AddCustomPlantView.swift */,
 				D9C8FFBE290FDD90007E32CF /* AddCustomPlantInformationview.swift */,
 				D91B865A2915FAB600631102 /* PlantClass.swift */,
+				D941687E2918A3CA00E001DD /* customPlantClass.swift */,
 				D91B865C291601E300631102 /* PlantConfirmationView.swift */,
 				D921677A290391A40002F405 /* Assets.xcassets */,
 				D921677C290391A40002F405 /* grass.entitlements */,
@@ -94,6 +110,7 @@
 				D921676F290391A20002F405 /* Sources */,
 				D9216770290391A20002F405 /* Frameworks */,
 				D9216771290391A20002F405 /* Resources */,
+				D94168932918D3F000E001DD /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -156,6 +173,7 @@
 			files = (
 				D9216779290391A20002F405 /* ContentView.swift in Sources */,
 				C69E05C3290CBC97008A449E /* AddCustomPlantView.swift in Sources */,
+				D941687F2918A3CA00E001DD /* customPlantClass.swift in Sources */,
 				D9216777290391A20002F405 /* grassApp.swift in Sources */,
 				D91B865D291601E300631102 /* PlantConfirmationView.swift in Sources */,
 				C680A1CF290BFD8200366299 /* PlantSelectionView.swift in Sources */,
@@ -281,29 +299,34 @@
 		D9216783290391A40002F405 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = grass/grass.entitlements;
 				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"grass/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U4679NLU6P;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Grass;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
@@ -321,29 +344,34 @@
 		D9216784290391A40002F405 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = grass/grass.entitlements;
 				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"grass/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U4679NLU6P;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Grass;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;

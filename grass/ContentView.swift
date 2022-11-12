@@ -32,6 +32,7 @@ struct ContentView: View {
                         .foregroundColor(.white)
                         .background(Color("Swamp Green"))
                         .cornerRadius(22.0)
+                        .shadow(radius: 20)
                 }
 
             }
