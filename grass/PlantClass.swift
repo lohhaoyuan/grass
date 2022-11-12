@@ -1,6 +1,6 @@
 import Foundation
 struct Plant: Identifiable, Codable{
-    var id: UUID
+    var id = UUID()
     var name: String
     var scientificName: String
     var wateringFrequency: Int
