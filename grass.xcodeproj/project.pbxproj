@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5FE49734291F36AF0068EE12 /* PlantManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE49733291F36AF0068EE12 /* PlantManager.swift */; };
 		C680A1CF290BFD8200366299 /* PlantSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C680A1CE290BFD8200366299 /* PlantSelectionView.swift */; };
 		C69E05C3290CBC97008A449E /* AddCustomPlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69E05C2290CBC97008A449E /* AddCustomPlantView.swift */; };
 		D91B865B2915FAB600631102 /* PlantClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91B865A2915FAB600631102 /* PlantClass.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5FE49733291F36AF0068EE12 /* PlantManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantManager.swift; sourceTree = "<group>"; };
 		C680A1CE290BFD8200366299 /* PlantSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantSelectionView.swift; sourceTree = "<group>"; };
 		C69E05C2290CBC97008A449E /* AddCustomPlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomPlantView.swift; sourceTree = "<group>"; };
 		D91B865A2915FAB600631102 /* PlantClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantClass.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				D9F231BF291F505F00EB91E1 /* Info.plist */,
 				D9216776290391A20002F405 /* grassApp.swift */,
 				D9216778290391A20002F405 /* ContentView.swift */,
+				5FE49733291F36AF0068EE12 /* PlantManager.swift */,
 				C680A1CE290BFD8200366299 /* PlantSelectionView.swift */,
 				C69E05C2290CBC97008A449E /* AddCustomPlantView.swift */,
 				D9C8FFBE290FDD90007E32CF /* AddCustomPlantInformationview.swift */,
@@ -180,6 +183,7 @@
 				D91B865D291601E300631102 /* PlantConfirmationView.swift in Sources */,
 				C680A1CF290BFD8200366299 /* PlantSelectionView.swift in Sources */,
 				D91B865B2915FAB600631102 /* PlantClass.swift in Sources */,
+				5FE49734291F36AF0068EE12 /* PlantManager.swift in Sources */,
 				D9C8FFBF290FDD91007E32CF /* AddCustomPlantInformationview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

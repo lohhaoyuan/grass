@@ -40,7 +40,7 @@ struct PlantSelectionView: View {
                         .shadow(radius: 20)
                     
                 }
-                
+                .padding(9)
                 
                 
                 NavigationLink(destination: AddCustomPlantView()) {
