@@ -19,9 +19,7 @@ struct PlantSelectionView: View {
                     .padding(.all, 18.0)
                 
 
-                
-                Spacer()
-                NavigationLink(destination: AddCustomPlantView()) {
+                    NavigationLink(destination: AddCustomPlantView()) {
                     Text("My plant isn't here!")
                         .padding(.vertical, 20)
                         .padding(.horizontal, 60.75)

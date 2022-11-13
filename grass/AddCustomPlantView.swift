@@ -8,23 +8,33 @@
 import SwiftUI
 
 struct AddCustomPlantView: View {
+    
+    @State var plantName: String = ""
+    @State var plantNickname: String = ""
+    @State var pickerVisible
+    
     var body: some View {
         NavigationView {
             VStack{
-                Text("What’s your plant called?")
-                    .font(.largeTitle)
-                    .fontWeight(.semibold)
-                    .multilineTextAlignment(.leading)
-                    .padding(.all, 11.0)
-                
-                
-                TextField("Plant name", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                    .padding(.leading, 20.0)
-                
+                List {
+                    Section(header: Text("Basic Details")) {
+                        TextField(
+                        "Plant Name",
+                        text: $plantName
+                        )
+                        TextField(
+                        "Nickname",
+                        text: $plantNickname
+                        )
+                    }
+                    Section(header: Text("Plant Care")) {
+                        Text("Placeholder")
+                    }
+                }
             }
             .foregroundColor(Color("Swamp Green"))
+            .navigationTitle("Add Custom Plant")
         }
-        .navigationTitle("Add Custom Plant")
     }
 }
 
