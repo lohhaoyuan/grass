@@ -11,7 +11,7 @@ struct AddCustomPlantView: View {
     
     @State var plantName: String = ""
     @State var plantNickname: String = ""
-    @State var pickerVisible
+    @State var pickerVisible = false
     
     var body: some View {
         NavigationView {
@@ -28,8 +28,12 @@ struct AddCustomPlantView: View {
                         )
                     }
                     Section(header: Text("Plant Care")) {
-                        Text("Placeholder")
+                        Text("Maximum Temperature") // placeholder -> user adds max temperature here
+                        Text("Minimum Temperature") // placeholder -> user adds min temperature here
+                        Text("Watering Frequency") // placeholder -> user adds watering frequency here
+                        Text("Fertilisation Frequency") // placeholder -> user adds fertilisation frequency here
                     }
+                    Text("Add Plant")
                 }
             }
             .foregroundColor(Color("Swamp Green"))
