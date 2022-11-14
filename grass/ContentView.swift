@@ -5,12 +5,14 @@ struct ContentView: View {
     @State var plants: [Plant] = [
         Plant(name: "Grass", scientificName: "Poecae", wateringFrequency: 7, wateringGuide: "Mositen 3cm soil", fertilisationFrequency: 120, fertilisationGuide: "Nitrogen-mixed fertiliser", temperatureRangeBegin: 18, temperatureRangeEnd: 32)
     ]
+    @StateObject var plantManager = PlantManager()
+
     var body: some View {
         NavigationView {
             List {
-                ForEach(plants) { plant in
+                ForEach($plants) { $plant in
                     let index = plants.firstIndex(of: plant)!
-                    NavigationLink(destination: PlantDetailView() ){
+                    NavigationLink(destination: PlantDetailView(plants: $plant)) {
                         VStack(alignment: .leading){
                             Text(plant.name)
                             HStack{
