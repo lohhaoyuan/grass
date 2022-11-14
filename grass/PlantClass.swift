@@ -1,5 +1,5 @@
 import Foundation
-struct Plant: Identifiable, Codable{
+struct Plant: Identifiable, Codable, Equatable{
     var id = UUID()
     var name: String
     var scientificName: String

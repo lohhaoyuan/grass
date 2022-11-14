@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F7636142921E803007EE253 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7636132921E802007EE253 /* ContentView.swift */; };
+		5F7636162921E8D2007EE253 /* PlantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7636152921E8D2007EE253 /* PlantDetailView.swift */; };
 		5FE49734291F36AF0068EE12 /* PlantManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE49733291F36AF0068EE12 /* PlantManager.swift */; };
 		C680A1CF290BFD8200366299 /* PlantSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C680A1CE290BFD8200366299 /* PlantSelectionView.swift */; };
 		C69E05C3290CBC97008A449E /* AddCustomPlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69E05C2290CBC97008A449E /* AddCustomPlantView.swift */; };
 		D91B865B2915FAB600631102 /* PlantClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91B865A2915FAB600631102 /* PlantClass.swift */; };
 		D91B865D291601E300631102 /* PlantConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91B865C291601E300631102 /* PlantConfirmationView.swift */; };
 		D9216777290391A20002F405 /* grassApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9216776290391A20002F405 /* grassApp.swift */; };
-		D9216779290391A20002F405 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9216778290391A20002F405 /* ContentView.swift */; };
+		D9216779290391A20002F405 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9216778290391A20002F405 /* Onboarding.swift */; };
 		D921677B290391A40002F405 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D921677A290391A40002F405 /* Assets.xcassets */; };
 		D921677F290391A40002F405 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D921677E290391A40002F405 /* Preview Assets.xcassets */; };
 		D941687F2918A3CA00E001DD /* customPlantClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D941687E2918A3CA00E001DD /* customPlantClass.swift */; };
@@ -34,6 +36,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5F7636132921E802007EE253 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5F7636152921E8D2007EE253 /* PlantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDetailView.swift; sourceTree = "<group>"; };
 		5FE49733291F36AF0068EE12 /* PlantManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantManager.swift; sourceTree = "<group>"; };
 		C680A1CE290BFD8200366299 /* PlantSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantSelectionView.swift; sourceTree = "<group>"; };
 		C69E05C2290CBC97008A449E /* AddCustomPlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomPlantView.swift; sourceTree = "<group>"; };
@@ -41,7 +45,7 @@
 		D91B865C291601E300631102 /* PlantConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantConfirmationView.swift; sourceTree = "<group>"; };
 		D9216773290391A20002F405 /* grass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9216776290391A20002F405 /* grassApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = grassApp.swift; sourceTree = "<group>"; };
-		D9216778290391A20002F405 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D9216778290391A20002F405 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		D921677A290391A40002F405 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D921677C290391A40002F405 /* grass.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = grass.entitlements; sourceTree = "<group>"; };
 		D921677E290391A40002F405 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -82,7 +86,9 @@
 			children = (
 				D9F231BF291F505F00EB91E1 /* Info.plist */,
 				D9216776290391A20002F405 /* grassApp.swift */,
-				D9216778290391A20002F405 /* ContentView.swift */,
+				D9216778290391A20002F405 /* Onboarding.swift */,
+				5F7636132921E802007EE253 /* ContentView.swift */,
+				5F7636152921E8D2007EE253 /* PlantDetailView.swift */,
 				5FE49733291F36AF0068EE12 /* PlantManager.swift */,
 				C680A1CE290BFD8200366299 /* PlantSelectionView.swift */,
 				D9C8FFBE290FDD90007E32CF /* AddCustomPlantInformationview.swift */,
@@ -176,12 +182,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9216779290391A20002F405 /* ContentView.swift in Sources */,
+				D9216779290391A20002F405 /* Onboarding.swift in Sources */,
 				C69E05C3290CBC97008A449E /* AddCustomPlantView.swift in Sources */,
 				D941687F2918A3CA00E001DD /* customPlantClass.swift in Sources */,
 				D9216777290391A20002F405 /* grassApp.swift in Sources */,
+				5F7636162921E8D2007EE253 /* PlantDetailView.swift in Sources */,
 				D91B865D291601E300631102 /* PlantConfirmationView.swift in Sources */,
 				C680A1CF290BFD8200366299 /* PlantSelectionView.swift in Sources */,
+				5F7636142921E803007EE253 /* ContentView.swift in Sources */,
 				D91B865B2915FAB600631102 /* PlantClass.swift in Sources */,
 				5FE49734291F36AF0068EE12 /* PlantManager.swift in Sources */,
 				D9C8FFBF290FDD91007E32CF /* AddCustomPlantInformationview.swift in Sources */,

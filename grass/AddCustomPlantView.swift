@@ -32,7 +32,9 @@ struct AddCustomPlantView: View {
                         Text("Watering Frequency") // placeholder -> user adds watering frequency here
                         Text("Fertilisation Frequency") // placeholder -> user adds fertilisation frequency here
                     }
-                    Text("Add Plant")
+                    Button("Add Plant") {
+                        
+                    }
                 }
             }
             .foregroundColor(Color("Swamp Green"))
