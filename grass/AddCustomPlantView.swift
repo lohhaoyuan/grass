@@ -14,7 +14,6 @@ struct AddCustomPlantView: View {
     @State var pickerVisible = false
     
     var body: some View {
-        NavigationView {
             VStack{
                 List {
                     Section(header: Text("Basic Details")) {
@@ -38,7 +37,7 @@ struct AddCustomPlantView: View {
             }
             .foregroundColor(Color("Swamp Green"))
             .navigationTitle("Add Custom Plant")
-        }
+        
     }
 }
 

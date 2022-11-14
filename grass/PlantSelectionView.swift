@@ -9,7 +9,6 @@ import SwiftUI
 
 struct PlantSelectionView: View {
     var body: some View {
-        NavigationView{
             VStack{
                 Text("What do you want to grow?")
                     .font(.largeTitle)
@@ -30,7 +29,7 @@ struct PlantSelectionView: View {
                     
                     
                 }
-            }
+            
         }
     }
 }
