@@ -14,7 +14,7 @@ struct OnboardingView: View {
                 HStack(){
                     Text("Grass")
                         .foregroundColor(Color("Swamp Green"))
-                        .font(.monospaced(.largeTitle)())
+                        .font(.monospaced(.title)())
                         .multilineTextAlignment(.leading)
                     Divider()
                         .frame(width: 4.0, height: 75.0)

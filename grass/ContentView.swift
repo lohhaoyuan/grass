@@ -1,10 +1,15 @@
 import SwiftUI
 
+
+
 struct ContentView: View {
     @State var isNewPlantPresented = false
     @State var plants: [Plant] = [
         Plant(name: "Grass", scientificName: "Poecae", wateringFrequency: 7, wateringGuide: "Mositen 3cm soil", fertilisationFrequency: 120, fertilisationGuide: "Nitrogen-mixed fertiliser", temperatureRangeBegin: 18, temperatureRangeEnd: 32)
+        
+        
     ]
+    
     @StateObject var plantManager = PlantManager()
 
     var body: some View {
