@@ -37,12 +37,14 @@ struct PlantDetailView: View {
                         Text("Minimum Temperature")
                         Spacer()
                         Text(String(plants.temperatureRangeBegin))
+                            .foregroundColor(.gray)
                     }
                     HStack{
                         Image(systemName: "thermometer.high")
                         Text("Maximum Temperature")
                         Spacer()
                         Text(String(plants.temperatureRangeEnd))
+                            .foregroundColor(.gray)
                     }
                     HStack{
                         Image(systemName: "drop")
