@@ -46,18 +46,24 @@ struct PlantConfirmationView: View {
             
             HStack{
                 VStack{
+                    Image(systemName: "drop.fill")
+                        .scaledToFill()
+                        .foregroundColor(.blue)
                     Text("Water every")
-                        .padding([.top, .leading])
                     Text("\(plants.wateringFrequency)")
                         .font(.title)
                     Text("days")
                 }
                 Divider()
-                    .frame(width: 4.0, height: 75.0)
+                    .frame(width: 4.0, height: 100)
                     .overlay(Color("Swamp Green"))
                 VStack{
+                    
+                    Image(systemName: "bolt.fill")
+                        .scaledToFill()
+                        .foregroundColor(.orange)
+                    
                     Text("Fertilise every")
-                        .padding(.top)
                     
                     Text("\(plants.fertilisationFrequency)")
                         .font(.title)
@@ -67,13 +73,16 @@ struct PlantConfirmationView: View {
                 }
                 
                 Divider()
-                    .frame(width: 4.0, height: 75.0)
+                    .frame(width: 4.0, height: 100)
                     .overlay(Color("Swamp Green"))
                 
                 
                 VStack{
+                    Image(systemName: "thermometer.sun.fill")
+                        .scaledToFill()
+                        .foregroundColor(.orange)
+                    
                     Text("Keep between")
-                        .padding([.top, .trailing])
                     
                     Text("\(plants.temperatureRangeBegin)- \(plants.temperatureRangeEnd)°C")
                         .font(.title)
@@ -83,7 +92,7 @@ struct PlantConfirmationView: View {
                 
             }
             
-            ZStack{
+            VStack{
                 Color(.white)
                 VStack{
                     Text("Add this Plant?")
@@ -94,21 +103,30 @@ struct PlantConfirmationView: View {
                 .padding(.all)
                 
                 Spacer()
-                Spacer()
-                Spacer()
-                Spacer()
+
 
                 
                 Button("Yes") {
                     /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
                 }
                 .padding(.vertical, 20)
-                .padding(.horizontal, 87.75)
+                .padding(.horizontal, 137.0)
+                .foregroundColor(.white)
+                .background(Color("Swamp Green"))
+                .cornerRadius(22.0)
+                .shadow(radius: 20)
+                
+                Button("Change Plant Type") {
+                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                }
+                .padding(.vertical, 20)
+                .padding(.horizontal, 79.75)
                 .foregroundColor(.white)
                 .background(Color("Swamp Green"))
                 .cornerRadius(22.0)
                 .shadow(radius: 20)
             
+                Spacer()
                 
             }
             .background()
