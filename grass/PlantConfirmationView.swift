@@ -24,7 +24,7 @@ struct PlantConfirmationView: View {
                             .italic()
                             .foregroundColor(Color(.white))
                             .font(.title)
-                            .padding(.leading, 14.0)
+                            .padding(.leading, 5.0)
                         
                         Text(plants.name)
                             .bold()
@@ -35,7 +35,7 @@ struct PlantConfirmationView: View {
                     Spacer()
                 }
             }
-            .frame(height:250)
+            .frame(height:150)
             
             Spacer()
             Spacer()
