@@ -25,30 +25,19 @@ struct PlantConfirmationView: View {
                             .italic()
                             .foregroundColor(Color(.white))
                             .font(.title2)
-                        
                         Text(plants.name)
                             .bold()
                             .foregroundColor(Color(.white))
                             .font(.title)
-                            
                             .padding(.bottom)
-
                     }
-                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                    
+                    .padding(.leading)
                     Spacer()
                 }
             }
             .frame(height:150)
-            
-            
             Spacer()
-            Spacer()
-            Spacer()
-            Spacer()
-            Spacer()
-            
-            
+
             HStack(alignment: .top){
                 VStack{
                     Image(systemName: "drop.fill")
@@ -63,25 +52,17 @@ struct PlantConfirmationView: View {
                     .frame(width: 4.0, height: 100)
                     .overlay(Color("Swamp Green"))
                 VStack{
-                    
                     Image(systemName: "bolt.fill")
                         .scaledToFill()
                         .foregroundColor(.orange)
-                    
                     Text("Fertilise every")
-                    
                     Text("\(plants.fertilisationFrequency)")
                         .font(.title)
-
-                    
                     Text("days")
                 }
-                
                 Divider()
                     .frame(width: 4.0, height: 100)
                     .overlay(Color("Swamp Green"))
-                
-                
                 VStack{
                     Image(systemName: "thermometer.sun.fill")
                         .scaledToFill()
@@ -91,27 +72,16 @@ struct PlantConfirmationView: View {
                     
                     Text("\(plants.temperatureRangeBegin)- \(plants.temperatureRangeEnd)°C")
                         .font(.title)
-                    
-                    
                 }
-                
             }
-            
-Spacer()
+            .padding(.top, 40)
             
             VStack(){
-                VStack{
-                    Text("Add this Plant?")
+                Text("Add this Plant?")
                         .font(.title)
-                    Text("Grass will automatically remind you when its time to care for your plant")
-                }
-                .frame(width:300)
-                .padding(.all)
-                
-                Spacer()
-
-
-                
+                Text("Grass will automatically remind you when its time to care for your plant")
+                        .scaledToFit()
+                        .padding(.bottom)
                 Button("Yes") {
                     /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
                 }
@@ -121,7 +91,6 @@ Spacer()
                 .background(Color("Swamp Green"))
                 .cornerRadius(22.0)
                 .shadow(radius: 20)
-                
                 Button("Change Plant Type") {
                     /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
                 }
@@ -131,11 +100,11 @@ Spacer()
                 .background(Color("Swamp Green"))
                 .cornerRadius(22.0)
                 .shadow(radius: 20)
-            
                 Spacer()
-                
             }
             .background()
+            .padding(.all)
+            .padding(.top, 30)
             .ignoresSafeArea()
         }
     }
