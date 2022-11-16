@@ -8,29 +8,29 @@
 import SwiftUI
 
 struct PlantConfirmationView: View {
-    @State var plantsel = Plant(name: "Grass", scientificName: "Poaceae", wateringFrequency: 7, wateringGuide: "Adequate to moisten 3.175 cm (depth) of soil.", fertilisationFrequency: 120, fertilisationGuide: "One pound of nitrogen/mixed fertiliser is recommended per 1k ft^2 of grass", temperatureRangeBegin: 18, temperatureRangeEnd: 32)
+    
+    @Binding var plants: Plant
+    
     var body: some View {
         VStack(spacing: 0) {
             ZStack{
                 Rectangle()
                     .fill(Color("Swamp Green"))
                     .edgesIgnoringSafeArea(.top)
-                
                 HStack{
                     VStack{
                         Spacer()
-                        Text(plantsel.scientificName)
+                        Text(plants.scientificName)
                             .italic()
                             .foregroundColor(Color(.white))
                             .font(.title)
                             .padding(.leading, 14.0)
                         
-                        Text(plantsel.name)
+                        Text(plants.name)
                             .bold()
                             .foregroundColor(Color(.white))
                             .font(.largeTitle)
                             .padding(.leading, 5.0)
-                        
                     }
                     Spacer()
                 }
@@ -48,8 +48,7 @@ struct PlantConfirmationView: View {
                 VStack{
                     Text("Water every")
                         .padding([.top, .leading])
-
-                    Text("\(plantsel.wateringFrequency)")
+                    Text("\(plants.wateringFrequency)")
                         .font(.title)
                     Text("days")
                 }
@@ -60,7 +59,7 @@ struct PlantConfirmationView: View {
                     Text("Fertilise every")
                         .padding(.top)
                     
-                    Text("\(plantsel.fertilisationFrequency)")
+                    Text("\(plants.fertilisationFrequency)")
                         .font(.title)
 
                     
@@ -76,7 +75,7 @@ struct PlantConfirmationView: View {
                     Text("Keep between")
                         .padding([.top, .trailing])
                     
-                    Text("\(plantsel.temperatureRangeBegin)- \(plantsel.temperatureRangeEnd)°C")
+                    Text("\(plants.temperatureRangeBegin)- \(plants.temperatureRangeEnd)°C")
                         .font(.title)
                     
                     
@@ -120,7 +119,7 @@ struct PlantConfirmationView: View {
 
 struct PlantConfirmationView_Previews: PreviewProvider {
     static var previews: some View {
-        PlantConfirmationView()
+        PlantConfirmationView(plants: .constant(Plant(name: "Lorem Ipsum",scientificName: "Lorem Ipsum", wateringFrequency: 0, wateringGuide: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",fertilisationFrequency: 0,fertilisationGuide: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",temperatureRangeBegin: 0,temperatureRangeEnd: 0)))
     }
 }
 
