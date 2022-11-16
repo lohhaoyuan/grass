@@ -17,26 +17,31 @@ struct PlantConfirmationView: View {
                 Rectangle()
                     .fill(Color("Swamp Green"))
                     .edgesIgnoringSafeArea(.top)
-                HStack{
-                    VStack{
+                    
+                HStack(alignment: .top){
+                    VStack(alignment: .leading){
                         Spacer()
                         Text(plants.scientificName)
                             .italic()
                             .foregroundColor(Color(.white))
-                            .font(.title)
-                            .padding(.leading, 5.0)
+                            .font(.title2)
                         
                         Text(plants.name)
                             .bold()
                             .foregroundColor(Color(.white))
-                            .font(.largeTitle)
-                            .padding(.leading, 5.0)
+                            .font(.title)
+                            
+                            .padding(.bottom)
+
                     }
+                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                    
                     Spacer()
                 }
             }
             .frame(height:150)
             
+            
             Spacer()
             Spacer()
             Spacer()
@@ -44,7 +49,7 @@ struct PlantConfirmationView: View {
             Spacer()
             
             
-            HStack{
+            HStack(alignment: .top){
                 VStack{
                     Image(systemName: "drop.fill")
                         .scaledToFill()
@@ -92,8 +97,9 @@ struct PlantConfirmationView: View {
                 
             }
             
-            VStack{
-                Color(.white)
+Spacer()
+            
+            VStack(){
                 VStack{
                     Text("Add this Plant?")
                         .font(.title)
