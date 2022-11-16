@@ -13,20 +13,23 @@ struct PlantConfirmationView: View {
         VStack(spacing: 0) {
             ZStack{
                 Rectangle()
-                    .fill(.cyan)
+                    .fill(Color("Swamp Green"))
                     .edgesIgnoringSafeArea(.top)
+                
                 HStack{
                     VStack{
                         Spacer()
                         Text(plantsel.scientificName)
                             .italic()
-                            .foregroundColor(Color("Swamp Green"))
+                            .foregroundColor(Color(.white))
                             .font(.title)
+                            .padding(.leading, 14.0)
                         
                         Text(plantsel.name)
                             .bold()
-                            .foregroundColor(Color("Swamp Green"))
+                            .foregroundColor(Color(.white))
                             .font(.largeTitle)
+                            .padding(.leading, 5.0)
                         
                     }
                     Spacer()
@@ -34,15 +37,55 @@ struct PlantConfirmationView: View {
             }
             .frame(height:250)
             
-            List{
+            Spacer()
+            Spacer()
+            Spacer()
+            Spacer()
+            Spacer()
+            
+            
+            HStack{
                 Text("Water every \(plantsel.wateringFrequency) days")
-                Text("Fertilise every \(plantsel.fertilisationFrequency) days")
-                Text("Keep between \(plantsel.temperatureRangeBegin)°C and \(plantsel.temperatureRangeEnd)°C")
-            }
+                    .padding([.top, .leading])
+                
+                Divider()
+                    .frame(width: 4.0, height: 75.0)
+                    .overlay(Color("Swamp Green"))
+                VStack{
+                    Text("Fertilise every")
+                        .padding(.top)
+                    
+                    Text("\(plantsel.fertilisationFrequency)")
+                        .font(.title)
 
+                    
+                    Text("days")
+                }
+                
+                Divider()
+                    .frame(width: 4.0, height: 75.0)
+                    .overlay(Color("Swamp Green"))
+                
+                
+                VStack{
+                    Text("Keep between")
+                        .padding([.top, .trailing])
+                    
+                    Text("\(plantsel.temperatureRangeBegin)- \(plantsel.temperatureRangeEnd)°C")
+                        .font(.title)
+                    
+                    
+                }
+                Divider()
+                    .frame(width: 4.0, height: 75.0)
+                    .overlay(Color("Swamp Green"))
+                
+            }
+            
             ZStack{
                 Color(.white)
                 Rectangle()
+                    .frame(width: 304.0, height: 90.0)
                     .foregroundColor(Color(.systemGray6))
                 VStack{
                     Text("Add this Plant?")
@@ -63,3 +106,4 @@ struct PlantConfirmationView_Previews: PreviewProvider {
         PlantConfirmationView()
     }
 }
+

@@ -47,7 +47,9 @@ struct PlantDetailView: View {
                             .foregroundColor(.gray)
                     }
                     HStack{
-                        Image(systemName: "drop")
+                        Image(systemName: "drop.fill")
+                            .foregroundColor(Color.red)
+                        
                         VStack(alignment: .leading){
                             Text("Water every \(plants.wateringFrequency) days")
                                 .bold()
@@ -55,7 +57,8 @@ struct PlantDetailView: View {
                         }
                     }
                     HStack {
-                        Image(systemName: "leaf")
+                        Image(systemName: "drop.fill")
+                            .foregroundColor(Color.red)
                         VStack(alignment: .leading){
                             Text("Fertilise every \(plants.fertilisationFrequency) days")
                                 .bold()
