@@ -28,10 +28,7 @@ struct PlantSelectionView: View {
                         .background(Color("Swamp Green"))
                         .cornerRadius(22.0)
                         .shadow(radius: 20)
-                    
-                    
                 }
-            
         }
     }
 }
