@@ -45,9 +45,14 @@ struct PlantConfirmationView: View {
             
             
             HStack{
-                Text("Water every \(plantsel.wateringFrequency) days")
-                    .padding([.top, .leading])
-                
+                VStack{
+                    Text("Water every")
+                        .padding([.top, .leading])
+
+                    Text("\(plantsel.wateringFrequency)")
+                        .font(.title)
+                    Text("days")
+                }
                 Divider()
                     .frame(width: 4.0, height: 75.0)
                     .overlay(Color("Swamp Green"))
@@ -76,17 +81,11 @@ struct PlantConfirmationView: View {
                     
                     
                 }
-                Divider()
-                    .frame(width: 4.0, height: 75.0)
-                    .overlay(Color("Swamp Green"))
                 
             }
             
             ZStack{
                 Color(.white)
-                Rectangle()
-                    .frame(width: 304.0, height: 90.0)
-                    .foregroundColor(Color(.systemGray6))
                 VStack{
                     Text("Add this Plant?")
                         .font(.title)
@@ -94,6 +93,24 @@ struct PlantConfirmationView: View {
                 }
                 .frame(width:300)
                 .padding(.all)
+                
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
+
+                
+                Button("Yes") {
+                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                }
+                .padding(.vertical, 20)
+                .padding(.horizontal, 87.75)
+                .foregroundColor(.white)
+                .background(Color("Swamp Green"))
+                .cornerRadius(22.0)
+                .shadow(radius: 20)
+            
+                
             }
             .background()
             .ignoresSafeArea()
