@@ -1,12 +1,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var plantManager = PlantManager()
+    
     @State var isNewPlantPresented = false
     @State var plants: [Plant] = [
         Plant(name: "Grass", scientificName: "Poecae", wateringFrequency: 7, wateringGuide: "Mositen 3cm soil", fertilisationFrequency: 120, fertilisationGuide: "Nitrogen-mixed fertiliser", temperatureRangeBegin: 18, temperatureRangeEnd: 32)
     ]
-    @StateObject var plantManager = PlantManager()
-
+    
     var body: some View {
         NavigationView {
             List {
@@ -17,7 +19,6 @@ struct ContentView: View {
                             Text(plant.name)
                             HStack{
                                 Spacer()
-                                
                             }
                         }
                     }
@@ -29,7 +30,7 @@ struct ContentView: View {
                     plants.move(fromOffsets: source, toOffset: destination)
                 }
             }
-            .navigationTitle("Our Plants")
+            .navigationTitle("My Plants")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     EditButton()
@@ -43,7 +44,7 @@ struct ContentView: View {
                 }
             }
         }.sheet(isPresented: $isNewPlantPresented) {
-            AddCustomPlantView()
+            AddCustomPlantView(plants: $plantManager.plants)
         }
         
     }

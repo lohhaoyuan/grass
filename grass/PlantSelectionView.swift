@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct PlantSelectionView: View {
+    
+    @StateObject var plantManager = PlantManager()
+    
     var body: some View {
             VStack{
                 Text("What do you want to grow?")
@@ -16,9 +19,8 @@ struct PlantSelectionView: View {
                     .multilineTextAlignment(.leading)
                     .foregroundColor(Color("Swamp Green"))
                     .padding(.all, 18.0)
-                
 
-                    NavigationLink(destination: AddCustomPlantView()) {
+                NavigationLink(destination: AddCustomPlantView(plants: $plantManager.plants)) {
                     Text("My plant isn't here!")
                         .padding(.vertical, 20)
                         .padding(.horizontal, 60.75)
