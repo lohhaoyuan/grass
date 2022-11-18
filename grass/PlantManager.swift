@@ -10,6 +10,8 @@ class PlantManager: ObservableObject {
 
     let samplePlants: [Plant] = []
 
+    
+    
     init() {
         load()
     }
