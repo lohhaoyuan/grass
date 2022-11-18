@@ -11,19 +11,12 @@ struct OnboardingView: View {
     var body: some View {
         NavigationView{
             VStack{
-                HStack(){
-                    Text("Grass")
-                        .foregroundColor(Color("Swamp Green"))
-                        .font(.monospaced(.title)())
-                        .multilineTextAlignment(.leading)
-                    Divider()
-                        .frame(width: 4.0, height: 75.0)
-                        .overlay(Color("Swamp Green"))
-                    Text("Personalise Your Growing Experience")
-                        .font(.body)
-                        .multilineTextAlignment(.leading)
-                        .foregroundColor(Color("Swamp Green"))
-                }
+                
+                Image("text")
+                    .resizable()
+                    .scaledToFit()
+                    
+                    
                 .padding(70.0)
                 NavigationLink(destination: PlantSelectionView()) {
                     Text("Get Started")
