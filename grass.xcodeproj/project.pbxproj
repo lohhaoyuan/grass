@@ -83,14 +83,14 @@
 			isa = PBXGroup;
 			children = (
 				D9F231BF291F505F00EB91E1 /* Info.plist */,
+				D9216778290391A20002F405 /* OnboardingView.swift */,
+				C680A1CE290BFD8200366299 /* PlantSelectionView.swift */,
+				C69E05C2290CBC97008A449E /* AddCustomPlantView.swift */,
 				5F7636132921E802007EE253 /* ContentView.swift */,
 				D9216776290391A20002F405 /* grassApp.swift */,
-				D9216778290391A20002F405 /* OnboardingView.swift */,
 				5F7636152921E8D2007EE253 /* PlantDetailView.swift */,
 				5FE49733291F36AF0068EE12 /* PlantManager.swift */,
 				D9B9250F29225538003AEDF9 /* ForcedPlantsView.swift */,
-				C680A1CE290BFD8200366299 /* PlantSelectionView.swift */,
-				C69E05C2290CBC97008A449E /* AddCustomPlantView.swift */,
 				D91B865A2915FAB600631102 /* PlantClass.swift */,
 				D91B865C291601E300631102 /* PlantConfirmationView.swift */,
 				D921677A290391A40002F405 /* Assets.xcassets */,
