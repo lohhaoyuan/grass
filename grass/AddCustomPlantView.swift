@@ -78,6 +78,9 @@ struct AddCustomPlantView: View {
                     TextField("Fertilisation Instructions", text: $fertInstruct)
                 }
                 Button("Save") {
+                    
+                    
+                    
                     let plant = Plant(
                         name: plantName,
                         scientificName: scienceName,
