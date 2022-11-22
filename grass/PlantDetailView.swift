@@ -44,47 +44,46 @@ struct PlantDetailView: View {
                                 .multilineTextAlignment(.trailing)
                         }
                     }
-                    Section(header: Text("Care Instructions")) {
-                        HStack{
-                            Image(systemName: "thermometer.low")
-                                .foregroundColor(.blue)
-                            Text("Minimum Temperature")
-                            Spacer()
-                            Text("\(String(plants.temperatureRangeBegin))˚C")
-                                .foregroundColor(.gray)
-                        }
-                        HStack{
-                            Image(systemName: "thermometer.high")
-                                .foregroundColor(.red)
-                            Text("Maximum Temperature")
-                            Spacer()
-                            Text("\(String(plants.temperatureRangeEnd))˚C")
-                                .foregroundColor(.gray)
-                        }
-                        HStack{
-                            Image(systemName: "drop.fill")
-                                .foregroundColor(.cyan)
-                            VStack(alignment: .leading){
-                                Text("Water every \(plants.wateringFrequency) days")
-                                    .bold()
-                                Text(plants.wateringGuide)
-                            }
-                        }
-                        HStack {
-                            Image(systemName: "leaf.fill")
-                                .foregroundColor(.mint)
-                            VStack(alignment: .leading){
-                                Text("Fertilise every \(plants.fertilisationFrequency) days")
-                                    .bold()
-                                Text(plants.fertilisationGuide)
-                            }
-                        }
-                        
+                }
+                Section(header: Text("Care Instructions")) {
+                    HStack{
+                        Image(systemName: "thermometer.low")
+                            .foregroundColor(.blue)
+                        Text("Minimum Temperature")
+                        Spacer()
+                        Text("\(String(plants.temperatureRangeBegin))˚C")
+                            .foregroundColor(.gray)
+                    }
+                    HStack{
+                        Image(systemName: "thermometer.high")
+                            .foregroundColor(.red)
+                        Text("Maximum Temperature")
+                        Spacer()
+                        Text("\(String(plants.temperatureRangeEnd))˚C")
+                            .foregroundColor(.gray)
+                    }
+                    HStack{
+                        Image(systemName: "drop.fill")
+                            .foregroundColor(.cyan)
+                        Text("Water every \(plants.wateringFrequency) days")
+                                .bold()
+                    }
+                    HStack {
+                        Text(plants.wateringGuide)
+                    }
+                    HStack {
+                        Image(systemName: "leaf.fill")
+                            .foregroundColor(.mint)
+                        Text("Fertilise every \(plants.fertilisationFrequency) days")
+                            .bold()
+                    }
+                    HStack {
+                        Text(plants.fertilisationGuide)
                     }
                 }
             }
-            .navigationTitle(plants.name)
         }
+        .navigationTitle(plants.name)
     }
 }
     

@@ -34,22 +34,27 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach($plantManager.plants) { $plant in
-                    NavigationLink(destination: PlantDetailView(plants: $plant)) {
-                        VStack(alignment: .leading){
-                            Text(plant.name)
-                            HStack{
-                                Spacer()
+                if plantManager.plants.count != 0 {
+                    ForEach($plantManager.plants) { $plant in
+                        NavigationLink(destination: PlantDetailView(plants: $plant)) {
+                            VStack(alignment: .leading){
+                                Text(plant.name)
+                                HStack{
+                                    Spacer()
+                                }
                             }
                         }
                     }
+                    .onDelete { offset in
+                        plantManager.plants.remove(atOffsets: offset)
+                    }
+                    .onMove { source, destination in
+                        plantManager.plants.move(fromOffsets: source, toOffset: destination)
+                    }
+                } else {
+                    Text("Theres nothing here! Maybe add a plant?")
                 }
-                .onDelete { offset in
-                    plantManager.plants.remove(atOffsets: offset)
-                }
-                .onMove { source, destination in
-                    plantManager.plants.move(fromOffsets: source, toOffset: destination)
-                }
+                
             }
             .navigationTitle("My Plants")
             .toolbar {
