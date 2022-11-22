@@ -16,7 +16,7 @@ struct PlantDetailView: View {
             List{
                 Section(header: Text("Details")) {
                     HStack{
-                        Image(systemName: "tag")
+                        Image(systemName: "tag.fill")
                         Text("Plant Name")
                         Spacer()
                         Text(plants.name)
@@ -25,6 +25,7 @@ struct PlantDetailView: View {
                     }
                     HStack{
                         Image(systemName: "testtube.2")
+                            .foregroundColor(.purple)
                         Text("Scientific Name")
                         Spacer()
                         Text(plants.scientificName)
@@ -34,6 +35,7 @@ struct PlantDetailView: View {
                 Section(header: Text("Care Instructions")) {
                     HStack{
                         Image(systemName: "thermometer.low")
+                            .foregroundColor(.blue)
                         Text("Minimum Temperature")
                         Spacer()
                         Text("\(String(plants.temperatureRangeBegin))˚C")
@@ -41,13 +43,15 @@ struct PlantDetailView: View {
                     }
                     HStack{
                         Image(systemName: "thermometer.high")
+                            .foregroundColor(.red)
                         Text("Maximum Temperature")
                         Spacer()
                         Text("\(String(plants.temperatureRangeEnd))˚C")
                             .foregroundColor(.gray)
                     }
                     HStack{
-                        Image(systemName: "drop") 
+                        Image(systemName: "drop.fill")
+                            .foregroundColor(.cyan)
                         VStack(alignment: .leading){
                             Text("Water every \(plants.wateringFrequency) days")
                                 .bold()
@@ -55,7 +59,8 @@ struct PlantDetailView: View {
                         }
                     }
                     HStack {
-                        Image(systemName: "leaf")
+                        Image(systemName: "leaf.fill")
+                            .foregroundColor(.mint)
                         VStack(alignment: .leading){
                             Text("Fertilise every \(plants.fertilisationFrequency) days")
                                 .bold()
