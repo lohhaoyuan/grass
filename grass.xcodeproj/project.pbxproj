@@ -19,7 +19,6 @@
 		D921677B290391A40002F405 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D921677A290391A40002F405 /* Assets.xcassets */; };
 		D921677F290391A40002F405 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D921677E290391A40002F405 /* Preview Assets.xcassets */; };
 		D92EEE492927308500666B7F /* firstTimePlantAdderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92EEE482927308500666B7F /* firstTimePlantAdderView.swift */; };
-		D99CAB1B292BA02700CE5EE8 /* TheOnlyLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D99CAB1A292BA02700CE5EE8 /* TheOnlyLaunchScreen.storyboard */; };
 		D9B9251029225538003AEDF9 /* forcedPlants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B9250F29225538003AEDF9 /* forcedPlants.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +50,6 @@
 		D921677C290391A40002F405 /* grass.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = grass.entitlements; sourceTree = "<group>"; };
 		D921677E290391A40002F405 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D92EEE482927308500666B7F /* firstTimePlantAdderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstTimePlantAdderView.swift; sourceTree = "<group>"; };
-		D99CAB1A292BA02700CE5EE8 /* TheOnlyLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TheOnlyLaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9B9250F29225538003AEDF9 /* forcedPlants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forcedPlants.swift; sourceTree = "<group>"; };
 		D9F231BF291F505F00EB91E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,7 +68,6 @@
 		D921676A290391A20002F405 = {
 			isa = PBXGroup;
 			children = (
-				D99CAB1A292BA02700CE5EE8 /* TheOnlyLaunchScreen.storyboard */,
 				D9216775290391A20002F405 /* grass */,
 				D9216774290391A20002F405 /* Products */,
 			);
@@ -175,7 +172,6 @@
 			files = (
 				D921677F290391A40002F405 /* Preview Assets.xcassets in Resources */,
 				D921677B290391A40002F405 /* Assets.xcassets in Resources */,
-				D99CAB1B292BA02700CE5EE8 /* TheOnlyLaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

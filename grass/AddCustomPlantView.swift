@@ -26,7 +26,7 @@ struct AddCustomPlantView: View {
             Form {
                 Section(header: Text("Basic Details")) {
                     TextField("Plant Name", text: $plantName)
-                    TextField("Scientific Name", text: $scienceName)
+                    TextField("Scientific Name (Optional)", text: $scienceName)
                 }
                 Section(header: Text("Habitat")) {
                     HStack {
