@@ -33,8 +33,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                if plantManager.plants.count != 0 {
+                List {
                     ForEach($plantManager.plants) { $plant in
                         NavigationLink(destination: PlantDetailView(plants: $plant)) {
                             VStack(alignment: .leading){
@@ -51,25 +50,20 @@ struct ContentView: View {
                     .onMove { source, destination in
                         plantManager.plants.move(fromOffsets: source, toOffset: destination)
                     }
-                } else {
-                    Text("Theres nothing here! Maybe add a plant?")
-                }
-                
-            }
-            .navigationTitle("My Plants")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    EditButton()
-                }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        isNewPlantPresented = true
-                    } label: {
-                        Image(systemName: "plus")
+                .navigationTitle("My Plants")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        EditButton()
+                    }
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
+                            isNewPlantPresented = true
+                        } label: {
+                            Image(systemName: "plus")
+                        }
                     }
                 }
-            }
-        } .sheet(isPresented: $isNewPlantPresented) {
+            }.sheet(isPresented: $isNewPlantPresented) {
             AddCustomPlantView(plants: $plantManager.plants)
         }
         
