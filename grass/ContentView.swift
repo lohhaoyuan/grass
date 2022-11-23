@@ -26,30 +26,30 @@ class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
 }
 
 struct ContentView: View {
-        
+    
     @State var isNewPlantPresented = false
-
+    
     @StateObject var plantManager = PlantManager()
     
     var body: some View {
         NavigationView {
-                List {
-                    ForEach($plantManager.plants) { $plant in
-                        NavigationLink(destination: PlantDetailView(plants: $plant)) {
-                            VStack(alignment: .leading){
-                                Text(plant.name)
-                                HStack{
-                                    Spacer()
-                                }
+            List {
+                ForEach($plantManager.plants) { $plant in
+                    NavigationLink(destination: PlantDetailView(plants: $plant)) {
+                        VStack(alignment: .leading){
+                            Text(plant.name)
+                            HStack{
+                                Spacer()
                             }
                         }
                     }
-                    .onDelete { offset in
-                        plantManager.plants.remove(atOffsets: offset)
-                    }
-                    .onMove { source, destination in
-                        plantManager.plants.move(fromOffsets: source, toOffset: destination)
-                    }
+                }
+                .onDelete { offset in
+                    plantManager.plants.remove(atOffsets: offset)
+                }
+                .onMove { source, destination in
+                    plantManager.plants.move(fromOffsets: source, toOffset: destination)
+                }
                 .navigationTitle("My Plants")
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
@@ -64,9 +64,10 @@ struct ContentView: View {
                     }
                 }
             }.sheet(isPresented: $isNewPlantPresented) {
-            AddCustomPlantView(plants: $plantManager.plants)
+                AddCustomPlantView(plants: $plantManager.plants)
+            }
+            
         }
-        
     }
 }
 
