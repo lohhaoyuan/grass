@@ -43,30 +43,28 @@ struct ContentView: View {
                             }
                         }
                     }
-                }
-                .onDelete { offset in
+                }.onDelete { offset in
                     plantManager.plants.remove(atOffsets: offset)
                 }
                 .onMove { source, destination in
                     plantManager.plants.move(fromOffsets: source, toOffset: destination)
                 }
-                .navigationTitle("My Plants")
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        EditButton()
-                    }
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button {
-                            isNewPlantPresented = true
-                        } label: {
-                            Image(systemName: "plus")
-                        }
+            }
+            .navigationTitle("My Plants")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    EditButton()
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        isNewPlantPresented = true
+                    } label:   {
+                        Image(systemName: "plus")
                     }
                 }
-            }.sheet(isPresented: $isNewPlantPresented) {
-                AddCustomPlantView(plants: $plantManager.plants)
             }
-            
+        }.sheet(isPresented: $isNewPlantPresented) {
+            AddCustomPlantView(plants: $plantManager.plants)
         }
     }
 }
