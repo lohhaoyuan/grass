@@ -18,7 +18,10 @@
 		D9216779290391A20002F405 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9216778290391A20002F405 /* OnboardingView.swift */; };
 		D921677B290391A40002F405 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D921677A290391A40002F405 /* Assets.xcassets */; };
 		D921677F290391A40002F405 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D921677E290391A40002F405 /* Preview Assets.xcassets */; };
-		D9B9251029225538003AEDF9 /* ForcedPlantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B9250F29225538003AEDF9 /* ForcedPlantsView.swift */; };
+		D92EEE492927308500666B7F /* firstTimePlantAdderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92EEE482927308500666B7F /* firstTimePlantAdderView.swift */; };
+		D98D75FC292DB2FF006437F9 /* InfoOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98D75FB292DB2FF006437F9 /* InfoOverlayView.swift */; };
+		D98D75FE292DB3BC006437F9 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98D75FD292DB3BC006437F9 /* NotificationManager.swift */; };
+		D9B9251029225538003AEDF9 /* forcedPlants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B9250F29225538003AEDF9 /* forcedPlants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,7 +51,10 @@
 		D921677A290391A40002F405 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D921677C290391A40002F405 /* grass.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = grass.entitlements; sourceTree = "<group>"; };
 		D921677E290391A40002F405 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D9B9250F29225538003AEDF9 /* ForcedPlantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForcedPlantsView.swift; sourceTree = "<group>"; };
+		D92EEE482927308500666B7F /* firstTimePlantAdderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstTimePlantAdderView.swift; sourceTree = "<group>"; };
+		D98D75FB292DB2FF006437F9 /* InfoOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoOverlayView.swift; sourceTree = "<group>"; };
+		D98D75FD292DB3BC006437F9 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		D9B9250F29225538003AEDF9 /* forcedPlants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forcedPlants.swift; sourceTree = "<group>"; };
 		D9F231BF291F505F00EB91E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,14 +89,17 @@
 			isa = PBXGroup;
 			children = (
 				D9F231BF291F505F00EB91E1 /* Info.plist */,
+				D98D75FD292DB3BC006437F9 /* NotificationManager.swift */,
 				D9216778290391A20002F405 /* OnboardingView.swift */,
 				C680A1CE290BFD8200366299 /* PlantSelectionView.swift */,
 				C69E05C2290CBC97008A449E /* AddCustomPlantView.swift */,
+				D92EEE482927308500666B7F /* firstTimePlantAdderView.swift */,
 				5F7636132921E802007EE253 /* ContentView.swift */,
 				D9216776290391A20002F405 /* grassApp.swift */,
+				D98D75FB292DB2FF006437F9 /* InfoOverlayView.swift */,
 				5F7636152921E8D2007EE253 /* PlantDetailView.swift */,
 				5FE49733291F36AF0068EE12 /* PlantManager.swift */,
-				D9B9250F29225538003AEDF9 /* ForcedPlantsView.swift */,
+				D9B9250F29225538003AEDF9 /* forcedPlants.swift */,
 				D91B865A2915FAB600631102 /* PlantClass.swift */,
 				D91B865C291601E300631102 /* PlantConfirmationView.swift */,
 				D921677A290391A40002F405 /* Assets.xcassets */,
@@ -183,10 +192,13 @@
 				C69E05C3290CBC97008A449E /* AddCustomPlantView.swift in Sources */,
 				D9216777290391A20002F405 /* grassApp.swift in Sources */,
 				5F7636162921E8D2007EE253 /* PlantDetailView.swift in Sources */,
-				D9B9251029225538003AEDF9 /* ForcedPlantsView.swift in Sources */,
+				D9B9251029225538003AEDF9 /* forcedPlants.swift in Sources */,
+				D98D75FC292DB2FF006437F9 /* InfoOverlayView.swift in Sources */,
+				D98D75FE292DB3BC006437F9 /* NotificationManager.swift in Sources */,
 				D91B865D291601E300631102 /* PlantConfirmationView.swift in Sources */,
 				C680A1CF290BFD8200366299 /* PlantSelectionView.swift in Sources */,
 				5F7636142921E803007EE253 /* ContentView.swift in Sources */,
+				D92EEE492927308500666B7F /* firstTimePlantAdderView.swift in Sources */,
 				D91B865B2915FAB600631102 /* PlantClass.swift in Sources */,
 				5FE49734291F36AF0068EE12 /* PlantManager.swift in Sources */,
 			);
@@ -322,7 +334,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"grass/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U4679NLU6P;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -343,7 +355,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sg.tk.grass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -369,7 +381,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"grass/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U4679NLU6P;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -390,7 +402,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sg.tk.grass;
 				PRODUCT_NAME = "$(TARGET_NAME)";

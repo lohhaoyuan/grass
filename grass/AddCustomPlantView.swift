@@ -26,7 +26,7 @@ struct AddCustomPlantView: View {
             Form {
                 Section(header: Text("Basic Details")) {
                     TextField("Plant Name", text: $plantName)
-                    TextField("Scientific Name", text: $scienceName)
+                    TextField("Scientific Name (Optional)", text: $scienceName)
                 }
                 Section(header: Text("Habitat")) {
                     HStack {
@@ -52,7 +52,7 @@ struct AddCustomPlantView: View {
                 }
                 Section(header: Text("Watering")) {
                     HStack {
-                        Text("Watering Frequency")
+                        Text("Frequency")
                         TextField("", value: $waterFreq, formatter: NumberFormatter())
                                 .frame(width: 50)
                                 .padding(.leading)
@@ -66,7 +66,7 @@ struct AddCustomPlantView: View {
                 }
                 Section(header: Text("Fertilisation")) {
                     HStack {
-                        Text("Fertilisation Frequency")
+                        Text("Frequency")
                         TextField("", value: $fertFreq, formatter: NumberFormatter())
                                 .frame(width: 50)
                                 .padding(.leading)
@@ -78,6 +78,9 @@ struct AddCustomPlantView: View {
                     TextField("Fertilisation Instructions", text: $fertInstruct)
                 }
                 Button("Save") {
+                    
+                    
+                    
                     let plant = Plant(
                         name: plantName,
                         scientificName: scienceName,
