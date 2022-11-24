@@ -12,6 +12,7 @@ import SwiftUI
 struct grassApp: App {
     
     private var delegate: NotificationDelegate = NotificationDelegate()
+    @StateObject var plantManager = PlantManager()
     
     init() {
         let center = UNUserNotificationCenter.current()
@@ -24,8 +25,12 @@ struct grassApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .preferredColorScheme(.light)
+            if plantManager.plants.count != 0 {
+                ContentView()
+                    .preferredColorScheme(.light)
+            } else {
+                PlantSelectionView()
+            }
         }
     }
 }
