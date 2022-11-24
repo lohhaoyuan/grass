@@ -8,28 +8,14 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    @ObservedObject var plantManager = PlantManager()
     var body: some View {
-        NavigationView{
-            VStack{
-                
-                Image("text")
-                    .resizable()
-                    .scaledToFit()
-                    
-                    
-                .padding(70.0)
-                NavigationLink(destination: PlantSelectionView()) {
-                    Text("Get Started")
-                        .padding(.vertical, 20)
-                        .padding(.horizontal, 87.75)
-                        .foregroundColor(.white)
-                        .background(Color("Swamp Green"))
-                        .cornerRadius(22.0)
-                        .shadow(radius: 20)
-                }
-
-            }
-        }
+        TabView{
+            
+            LaunchView()
+            PlantSelectionView()
+            AddCustomPlantView(plants: $plantManager.plants)
+        }.tabViewStyle(.page)
     }
 }
 
