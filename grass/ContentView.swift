@@ -29,6 +29,7 @@ struct ContentView: View {
     
     
     
+    
     @StateObject private var notificationManager = NotificationManager()
     @State private var isCreatePresented = false
     
@@ -73,6 +74,7 @@ struct ContentView: View {
         }
     }
     
+
     
     @State var isNewPlantPresented = false
     
