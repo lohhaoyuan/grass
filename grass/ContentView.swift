@@ -27,12 +27,12 @@ class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
 
 struct ContentView: View {
     
-    @StateObject var plantManager = PlantManager()
+    
+
     
     @State var isNewPlantPresented = false
-    @State var isOnboardingPresented = false
     
-    @AppStorage("IsFirstLaunch") var isFirstLaunch = true
+    @StateObject var plantManager = PlantManager()
     
     var body: some View {
         NavigationView {
@@ -48,10 +48,10 @@ struct ContentView: View {
                     }
                 }.onDelete { offset in
                     plantManager.plants.remove(atOffsets: offset)
-                }.onMove { source, destination in
+                }
+                .onMove { source, destination in
                     plantManager.plants.move(fromOffsets: source, toOffset: destination)
                 }
-                
             }
             .navigationTitle("My Plants")
             .toolbar {
@@ -68,17 +68,6 @@ struct ContentView: View {
             }
         }.sheet(isPresented: $isNewPlantPresented) {
             AddCustomPlantView(plants: $plantManager.plants)
-        }.sheet(isPresented: $isOnboardingPresented) {
-            OnboardingView()
-        }
-        .onChange(of: plantManager.plants) { newValue in
-            isOnboardingPresented = newValue.isEmpty
-        }
-        .onAppear {
-            if isFirstLaunch {
-                isOnboardingPresented = true
-                isFirstLaunch = false
-            }
         }
     }
 }
