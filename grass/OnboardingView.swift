@@ -16,6 +16,8 @@ struct OnboardingView: View {
             PlantSelectionView()
             AddCustomPlantView(plants: $plantManager.plants)
         }.tabViewStyle(.page)
+            .indexViewStyle(.page(backgroundDisplayMode: .always))
+
     }
 }
 
