@@ -23,13 +23,10 @@ struct grassApp: App {
             }
         }
     }
+    
     var body: some Scene {
         WindowGroup {
-            if plantManager.plants.count != 0 {
-                ContentView()
-            } else {
-                OnboardingView()
-            }
+            ContentView()
         }
     }
 }
