@@ -28,52 +28,6 @@ class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
 struct ContentView: View {
     
     
-    
-    
-    @StateObject private var notificationManager = NotificationManager()
-    @State private var isCreatePresented = false
-    
-    private static var notificationDateFormatter: DateFormatter = {
-        let dateFormatter = DateFormatter()
-        dateFormatter.timeStyle = .short
-        return dateFormatter
-    }()
-    
-    private func timeDisplayText(from notification: UNNotificationRequest) -> String {
-        guard let nextTriggerDate = (notification.trigger as? UNCalendarNotificationTrigger)?.nextTriggerDate() else { return "" }
-        return Self.notificationDateFormatter.string(from: nextTriggerDate)
-    }
-    
-    @ViewBuilder
-    var infoOverlayView: some View {
-        switch notificationManager.authorizationStatus {
-        case .authorized:
-            if notificationManager.notifications.isEmpty {
-                InfoOverlayView(
-                    infoMessage: "No Notifications Yet",
-                    buttonTitle: "Create",
-                    systemImageName: "plus.circle",
-                    action: {
-                        isCreatePresented = true
-                    }
-                )
-            }
-        case .denied:
-            InfoOverlayView(
-                infoMessage: "Please Enable Notification Permission In Settings",
-                buttonTitle: "Settings",
-                systemImageName: "gear",
-                action: {
-                    if let url = URL(string: UIApplication.openSettingsURLString), UIApplication.shared.canOpenURL(url) {
-                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                    }
-                }
-            )
-        default:
-            EmptyView()
-        }
-    }
-    
 
     
     @State var isNewPlantPresented = false
