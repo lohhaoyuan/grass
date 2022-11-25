@@ -27,9 +27,8 @@ struct grassApp: App {
         WindowGroup {
             if plantManager.plants.count != 0 {
                 ContentView()
-                    .preferredColorScheme(.light)
             } else {
-                PlantSelectionView()
+                OnboardingView()
             }
         }
     }

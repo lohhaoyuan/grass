@@ -18,10 +18,19 @@ struct PlantSelectionView: View {
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.leading)
                     .foregroundColor(Color("Swamp Green"))
-                    .padding(.all, 18.0)
+                    .padding([.top, .leading, .trailing], 18.0)
+                
+                Text("We would give you plants but we want to give you maximum flexibility so you can add your own plant!")
+                    .font(.body)
+                    .fontWeight(.semibold)
+                    .multilineTextAlignment(.leading)
+                    .foregroundColor(Color("Swamp Green"))
+                    .padding([.leading, .bottom, .trailing], 29.0)
+                    .padding(/*@START_MENU_TOKEN@*/.top, 3.0/*@END_MENU_TOKEN@*/)
+                
 
                 NavigationLink(destination: AddCustomPlantView(plants: $plantManager.plants)) {
-                    Text("My plant isn't here!")
+                    Text("Add Plant")
                         .padding(.vertical, 20)
                         .padding(.horizontal, 60.75)
                         .foregroundColor(.white)
