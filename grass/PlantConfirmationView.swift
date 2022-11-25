@@ -81,7 +81,9 @@ struct PlantConfirmationView: View {
             VStack(){
                 Text("Add this Plant?")
                         .font(.title)
-                Text("Grass will automatically remind you when its time to care for your plant")
+                Text("Grass will automatically remind you")
+                        .scaledToFit()
+                Text("when its time to care for your plant")
                         .scaledToFit()
                         .padding(.bottom)
                 Button("Yes") {
