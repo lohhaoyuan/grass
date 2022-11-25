@@ -29,7 +29,7 @@ struct grassApp: App {
                 ContentView()
                     .preferredColorScheme(.light)
             } else {
-                PlantSelectionView()
+                OnboardingView()
             }
         }
     }
