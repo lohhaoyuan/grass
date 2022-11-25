@@ -28,7 +28,7 @@ struct grassApp: App {
             if plantManager.plants.count != 0 {
                 ContentView()
             } else {
-                PlantSelectionView()
+                OnboardingView()
             }
         }
     }
