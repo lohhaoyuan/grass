@@ -23,11 +23,13 @@ struct grassApp: App {
             }
         }
     }
-    
     var body: some Scene {
         WindowGroup {
-            
-            ContentView()
+            if plantManager.plants.count != 0 {
+                ContentView()
+            } else {
+                PlantSelectionView()
+            }
         }
     }
 }
