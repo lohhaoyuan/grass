@@ -10,6 +10,7 @@ import SwiftUI
 struct LaunchView: View {
     var body: some View {
         VStack{
+            
             Image("text")
                 .resizable()
                 .scaledToFit()
