@@ -27,6 +27,7 @@ class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
  */
 
 struct ContentView: View {
+
     
     @StateObject var plantManager = PlantManager()
     
@@ -36,6 +37,9 @@ struct ContentView: View {
     @AppStorage("IsFirstLaunch") var isFirstLaunch = true
     
     var body: some View {
+        
+        
+        
         NavigationView {
             List {
                 ForEach($plantManager.plants) { $plant in

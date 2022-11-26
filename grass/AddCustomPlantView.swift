@@ -4,7 +4,7 @@
 //
 //  Created by James Kuang on 29/10/22.
 //
-
+import UserNotifications
 import SwiftUI
 
 struct AddCustomPlantView: View {
@@ -82,6 +82,37 @@ struct AddCustomPlantView: View {
                         TextField("Fertilisation Instructions", text: $fertInstruct)
                     }
                     Button("Save") {
+                        
+                        let content = UNMutableNotificationContent()
+                        content.title = "Water your plant"
+                        content.subtitle = "It's  thirty"
+                        content.sound = UNNotificationSound.default
+                        
+                        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(waterFreq*86400) , repeats: true)
+                        
+                        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+                        
+                        UNUserNotificationCenter.current().add(request)
+                        
+                        func ferreq(){}
+                        func fert(){}
+                        func ferttrigger(){}
+                        let fert = UNMutableNotificationContent()
+
+                        fert.title = "Fertilise your plant"
+                        fert.subtitle = "It's  hungry"
+                        fert.sound = UNNotificationSound.default
+                        
+                        // show this notification five seconds from now
+                        let ferttrigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(fertFreq*86400) , repeats: true)
+                        
+                        // choose a random identifier
+                        let ferreq = UNNotificationRequest(identifier: UUID().uuidString, content: fert, trigger: ferttrigger)
+                        
+                        // add our notification request
+                        UNUserNotificationCenter.current().add(ferreq)
+                        
+                        
                         let plant = Plant(
                             name: plantName,
                             scientificName: scienceName,
