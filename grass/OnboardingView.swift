@@ -9,7 +9,6 @@ import SwiftUI
 
 struct OnboardingView: View {
     @ObservedObject var plantManager = PlantManager()
-<<<<<<< HEAD
     var body: some View {
         TabView{
             
@@ -18,16 +17,8 @@ struct OnboardingView: View {
         }.tabViewStyle(.page)
             .indexViewStyle(.page(backgroundDisplayMode: .always))
 
-=======
-    @State var isNewPlantPresented = false
-    var body: some View {
-            TabView{
-                LaunchView()
-                AddCustomPlantView(plants: $plantManager.plants)
-            }.tabViewStyle(.page)
-        }
->>>>>>> main
     }
+}
 
 
 struct OnboardingView_Previews: PreviewProvider {
