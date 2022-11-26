@@ -10,7 +10,7 @@ import SwiftUI
 @main
 
 struct grassApp: App {
-    
+    /*
     private var delegate: NotificationDelegate = NotificationDelegate()
     @StateObject var plantManager = PlantManager()
     
@@ -23,6 +23,7 @@ struct grassApp: App {
             }
         }
     }
+     */
     
     var body: some Scene {
         WindowGroup {
