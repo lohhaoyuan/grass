@@ -1,5 +1,4 @@
 import SwiftUI
-/*
 enum NotificationAction: String {
     case dimiss
     case reminder
@@ -24,7 +23,6 @@ class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
         completionHandler([.banner, .sound, .badge])
     }
 }
- */
 
 struct ContentView: View {
 
