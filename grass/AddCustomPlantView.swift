@@ -85,7 +85,7 @@ struct AddCustomPlantView: View {
                         
                         let content = UNMutableNotificationContent()
                         content.title = "Water your plant"
-                        content.subtitle = "It's  thirty"
+                        content.subtitle = "It's thirsty"
                         content.sound = UNNotificationSound.default
                         
                         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(waterFreq*86400) , repeats: true)
