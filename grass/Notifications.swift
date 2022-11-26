@@ -4,7 +4,7 @@
 //
 //  Created by T Krobot on 24/11/22.
 //
-
+/*
 import Foundation
 import UserNotifications
 
@@ -41,3 +41,4 @@ class NotificationHandler {
         UNUserNotificationCenter.current().add(request)
     }
 }
+*/
