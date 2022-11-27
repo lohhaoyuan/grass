@@ -1,4 +1,9 @@
 # Grass
-A houseplant app for the passionate plant people with bad memory.
 
-Grass helps you keep track of your plants and their status.
+[app.swiftinsg.org/grass](app.swiftinsg.org/grass)
+
+Are you tired of your plants dying despite everything you do to take care of it?
+Use grass!
+Grass keeps you on top of your watering and fertilisation needs, keeping your
+plant happy and alive.
+We send you timely notifications for you to water your plants in a timely manner with colourful dashboards with straight-to-the-point visuals so you can spend less time jumping around menus to find what you need
