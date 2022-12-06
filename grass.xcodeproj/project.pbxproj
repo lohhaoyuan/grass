@@ -12,7 +12,6 @@
 		5F7636162921E8D2007EE253 /* PlantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7636152921E8D2007EE253 /* PlantDetailView.swift */; };
 		5FE49734291F36AF0068EE12 /* PlantManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE49733291F36AF0068EE12 /* PlantManager.swift */; };
 		C69E05C3290CBC97008A449E /* AddCustomPlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69E05C2290CBC97008A449E /* AddCustomPlantView.swift */; };
-		D90CD384292FB3BC003DB6E7 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90CD383292FB3BC003DB6E7 /* Notifications.swift */; };
 		D91B865B2915FAB600631102 /* PlantClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91B865A2915FAB600631102 /* PlantClass.swift */; };
 		D91B865D291601E300631102 /* PlantConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91B865C291601E300631102 /* PlantConfirmationView.swift */; };
 		D9216777290391A20002F405 /* grassApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9216776290391A20002F405 /* grassApp.swift */; };
@@ -40,7 +39,6 @@
 		5F7636152921E8D2007EE253 /* PlantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDetailView.swift; sourceTree = "<group>"; };
 		5FE49733291F36AF0068EE12 /* PlantManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantManager.swift; sourceTree = "<group>"; };
 		C69E05C2290CBC97008A449E /* AddCustomPlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomPlantView.swift; sourceTree = "<group>"; };
-		D90CD383292FB3BC003DB6E7 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		D91B865A2915FAB600631102 /* PlantClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantClass.swift; sourceTree = "<group>"; };
 		D91B865C291601E300631102 /* PlantConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantConfirmationView.swift; sourceTree = "<group>"; };
 		D9216773290391A20002F405 /* grass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grass.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,7 +82,6 @@
 			children = (
 				D9F231BF291F505F00EB91E1 /* Info.plist */,
 				D9216778290391A20002F405 /* OnboardingView.swift */,
-				D90CD383292FB3BC003DB6E7 /* Notifications.swift */,
 				5F519EAA2930537100D3646E /* LaunchView.swift */,
 				C69E05C2290CBC97008A449E /* AddCustomPlantView.swift */,
 				5F7636132921E802007EE253 /* ContentView.swift */,
@@ -184,7 +181,6 @@
 				C69E05C3290CBC97008A449E /* AddCustomPlantView.swift in Sources */,
 				D9216777290391A20002F405 /* grassApp.swift in Sources */,
 				5F7636162921E8D2007EE253 /* PlantDetailView.swift in Sources */,
-				D90CD384292FB3BC003DB6E7 /* Notifications.swift in Sources */,
 				D91B865D291601E300631102 /* PlantConfirmationView.swift in Sources */,
 				5F7636142921E803007EE253 /* ContentView.swift in Sources */,
 				D91B865B2915FAB600631102 /* PlantClass.swift in Sources */,
