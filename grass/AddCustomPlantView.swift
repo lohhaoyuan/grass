@@ -4,6 +4,13 @@
 //
 //  Created by James Kuang on 29/10/22.
 //
+//
+//we were forced to write this code
+//
+//pls no copy
+//
+//made by tu madere
+
 import UserNotifications
 import SwiftUI
 

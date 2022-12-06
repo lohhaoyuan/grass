@@ -4,6 +4,12 @@
 //
 //  Created by saumil on 22/10/22.
 //
+//
+//we were forced to write this code
+//
+//pls no copy
+//
+//made by tu madere
 
 import SwiftUI
 

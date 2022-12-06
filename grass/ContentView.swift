@@ -1,3 +1,10 @@
+//
+//we were forced to write this code
+//
+//pls no copy
+//
+//made by tu madere 
+
 import SwiftUI
 enum NotificationAction: String {
     case dimiss

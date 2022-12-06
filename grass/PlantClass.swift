@@ -1,3 +1,10 @@
+//
+//we were forced to write this code
+//
+//pls no copy
+//
+//made by tu madere 
+
 import Foundation
 struct Plant: Identifiable, Codable, Equatable{
     var id = UUID()
