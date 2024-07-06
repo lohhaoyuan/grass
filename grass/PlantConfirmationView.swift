@@ -26,6 +26,11 @@ struct PlantConfirmationView: View {
                                 .italic()
                                 .foregroundColor(Color(.white))
                                 .font(.title2)
+                        } else {
+                            Text("Scientific Name Unavailable")
+                                .italic()
+                                .foregroundColor(Color(.white))
+                                .font(.title2)
                         }
                         Text(plants.name)
                             .bold()

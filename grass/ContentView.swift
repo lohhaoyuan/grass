@@ -6,6 +6,8 @@
 //made by tu madere 
 
 import SwiftUI
+import UserNotifications
+
 enum NotificationAction: String {
     case dimiss
     case reminder
@@ -32,7 +34,6 @@ class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
 }
 
 struct ContentView: View {
-
     
     @StateObject var plantManager = PlantManager()
     
@@ -42,9 +43,6 @@ struct ContentView: View {
     @AppStorage("IsFirstLaunch") var isFirstLaunch = true
     
     var body: some View {
-        
-        
-        
         NavigationView {
             List {
                 ForEach($plantManager.plants) { $plant in
@@ -57,11 +55,16 @@ struct ContentView: View {
                         }
                     }
                 }.onDelete { offset in
+                    // Remove notifications related to the deleted plants
+                    let plantsToDelete = offset.map { plantManager.plants[$0] }
+                    for plant in plantsToDelete {
+                        removeNotifications(for: plant)
+                    }
+                    
                     plantManager.plants.remove(atOffsets: offset)
                 }.onMove { source, destination in
                     plantManager.plants.move(fromOffsets: source, toOffset: destination)
                 }
-                
             }
             .navigationTitle("My Plants")
             .toolbar {
@@ -71,7 +74,7 @@ struct ContentView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         isNewPlantPresented = true
-                    } label:   {
+                    } label: {
                         Image(systemName: "plus")
                     }
                 }
@@ -91,49 +94,18 @@ struct ContentView: View {
             }
         }
     }
+    
+    // Function to remove notifications for a specific plant
+    func removeNotifications(for plant: Plant) {
+        let center = UNUserNotificationCenter.current()
+        center.getPendingNotificationRequests { requests in
+            for request in requests {
+                if request.identifier == plant.id.uuidString {
+                    center.removePendingNotificationRequests(withIdentifiers: [request.identifier])
+                }
+            }
+        }
+    }
 }
 
-/*
- Saumils Notification Code
- VStack {
-     Button("Schedule Notification") {
-         
-         let center = UNUserNotificationCenter.current()
-         
-         // create content
-         let content = UNMutableNotificationContent()
-         content.title = "Hot Coffee"
-         content.body =  "Your delicious coffee is ready!"
-         content.categoryIdentifier = NotificationCategory.general.rawValue
-         content.userInfo = ["customData": "Some Data"]
-         
-         if let url = Bundle.main.url(forResource: "coffee", withExtension: "png") {
-             if let attachment = try? UNNotificationAttachment(identifier: "image", url: url, options: nil) {
-                 content.attachments = [attachment]
-             }
-         }
-         
-         // create trigger
-         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5.0, repeats: false)
-         
-         // create request
-         let request = UNNotificationRequest(identifier: "Identifier", content: content, trigger: trigger)
-         
-         // define actions
-         let dismiss = UNNotificationAction(identifier: NotificationAction.dimiss.rawValue, title: "Dismiss", options: [])
-         
-         let reminder = UNNotificationAction(identifier: NotificationAction.reminder.rawValue, title: "Reminder", options: [])
-         
-         let generalCategory = UNNotificationCategory(identifier: NotificationCategory.general.rawValue, actions: [dismiss, reminder], intentIdentifiers: [], options: [])
-         
-         center.setNotificationCategories([generalCategory])
-         
-         // add request to notification center
-         center.add(request) { error in
-             if let error = error {
-                 print(error)
-             }
-         }
-     }
- }
- */
+

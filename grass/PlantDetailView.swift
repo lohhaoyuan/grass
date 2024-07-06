@@ -17,61 +17,61 @@ struct PlantDetailView: View {
     @Binding var plants: Plant
     
     var body: some View {
-        VStack {
-            List{
-                if let scienceName = plants.scientificName {
-                    Section(header: Text("Details")) {
-                        HStack{
-                            Image(systemName: "tag.fill")
-                            Text("Plant Name")
-                            Spacer()
-                            Text(plants.name)
-                                .foregroundColor(Color(.gray))
-                                .multilineTextAlignment(.trailing)
-                        }
-                        HStack{
+        VStack(alignment: .leading) {
+            HStack {
+                Text(plants.name)
+                    .font(.largeTitle)
+                    .bold()
+                Spacer()
+            }
+            .padding()
+            
+            List {
+                Section(header: Text("Details")) {
+                    HStack {
+                        Image(systemName: "tag.fill")
+                        Text("Plant Name")
+                        Spacer()
+                        Text(plants.name)
+                            .foregroundColor(Color(.gray))
+                            .multilineTextAlignment(.trailing)
+                    }
+                    
+                    // Check if scientificName is not empty before displaying
+                    if ((plants.scientificName?.isEmpty) == nil) {
+                        HStack {
                             Image(systemName: "testtube.2")
                                 .foregroundColor(.purple)
                             Text("Scientific Name")
                             Spacer()
-                            Text(scienceName)
+                            Text(plants.scientificName!)
                                 .foregroundColor(Color(.gray))
-                        }
-                    }
-                } else {
-                    Section(header: Text("Details")) {
-                        HStack{
-                            Image(systemName: "tag.fill")
-                            Text("Plant Name")
-                            Spacer()
-                            Text(plants.name)
-                                .foregroundColor(Color(.gray))
-                                .multilineTextAlignment(.trailing)
                         }
                     }
                 }
+                
                 Section(header: Text("Care Instructions")) {
-                    HStack{
+                    HStack {
                         Image(systemName: "thermometer.low")
                             .foregroundColor(.blue)
                         Text("Minimum Temperature")
                         Spacer()
-                        Text("\(String(plants.temperatureRangeBegin))˚C")
+                        Text("\(plants.temperatureRangeBegin)˚C")
                             .foregroundColor(.gray)
                     }
-                    HStack{
+                    HStack {
                         Image(systemName: "thermometer.high")
                             .foregroundColor(.red)
                         Text("Maximum Temperature")
                         Spacer()
-                        Text("\(String(plants.temperatureRangeEnd))˚C")
+                        Text("\(plants.temperatureRangeEnd)˚C")
                             .foregroundColor(.gray)
                     }
-                    HStack{
+                    HStack {
                         Image(systemName: "drop.fill")
                             .foregroundColor(.cyan)
                         Text("Water every \(plants.wateringFrequency) days")
-                                .bold()
+                            .bold()
                     }
                     HStack {
                         Text(plants.wateringGuide)
@@ -89,10 +89,12 @@ struct PlantDetailView: View {
             }
         }
         .navigationTitle(plants.name)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
-    
-struct PlantDetailView_Previews: PreviewProvider {        static var previews: some View {
-            PlantDetailView(plants: .constant(Plant(name: "Lorem Ipsum",scientificName: "Lorem Ipsum", wateringFrequency: 0, wateringGuide: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",fertilisationFrequency: 0,fertilisationGuide: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",temperatureRangeBegin: 0,temperatureRangeEnd: 0)))
-        }
+
+struct PlantDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        PlantDetailView(plants: .constant(Plant(name: "Lorem Ipsum", scientificName: "Lorem Ipsum", wateringFrequency: 0, wateringGuide: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", fertilisationFrequency: 0, fertilisationGuide: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", temperatureRangeBegin: 0, temperatureRangeEnd: 0)))
     }
+}
